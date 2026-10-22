@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snap Time - Real Moments Sharing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#a855f7',
+            neonGreen: '#22c55e',
+            darkBg: '#09090b',
+            cardBg: '#18181b'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-darkBg text-gray-100 font-sans min-h-screen flex flex-col items-center p-4">
+
+  <!-- Header -->
+  <header class="w-full max-w-md flex justify-between items-center py-4 border-b border-zinc-800">
+    <h1 class="text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-green-400">
+      SNAP TIME
+    </h1>
+    <div class="flex items-center gap-2 bg-zinc-800/80 px-3 py-1 rounded-full text-xs font-semibold text-green-400">
+      <i class="fa-solid fa-fire text-amber-500"></i> 12 Day Streak
+    </div>
+  </header>
+
+  <!-- Daily Real Alert Banner -->
+  <div class="w-full max-w-md my-4 p-4 rounded-2xl bg-gradient-to-r from-purple-900/40 to-zinc-900 border border-purple-500/30 flex items-center justify-between">
+    <div>
+      <p class="text-xs text-purple-400 font-bold uppercase tracking-widest">⚡ Time To Be Real</p>
+      <p class="text-sm text-gray-200 font-medium">Capture your raw moment now!</p>
+    </div>
+    <div class="text-right">
+      <span class="text-xl font-mono font-bold text-green-400">01:59</span>
+      <p class="text-[10px] text-gray-400">Remaining</p>
+    </div>
+  </div>
+
+  <!-- Camera Action Section -->
+  <main class="w-full max-w-md flex-1 flex flex-col items-center">
+    
+    <!-- Camera Viewport Simulation -->
+    <div class="relative w-full aspect-[3/4] bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl flex items-center justify-center group">
+      
+      <!-- Back Camera View -->
+      <div id="backView" class="w-full h-full bg-zinc-800 flex items-center justify-center text-zinc-600">
+        <i class="fa-solid fa-camera text-5xl"></i>
+      </div>
+
+      <!-- PIP Front Selfie View -->
+      <div id="frontView" class="absolute top-4 left-4 w-28 h-36 bg-zinc-950 rounded-2xl border-2 border-purple-500/80 overflow-hidden shadow-lg flex items-center justify-center text-zinc-700">
+        <i class="fa-solid fa-user text-2xl"></i>
+      </div>
+
+      <!-- Overlay Badge -->
+      <div class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full text-xs text-zinc-300 font-medium flex items-center gap-2">
+        <i class="fa-solid fa-location-dot text-purple-400"></i> Late Night Grind ☕
+      </div>
+    </div>
+
+    <!-- Capture / Action Controls -->
+    <div class="w-full flex items-center justify-around my-6">
+      <button class="w-12 h-12 rounded-full bg-zinc-800 hover:bg-zinc-700 text-zinc-300 flex items-center justify-center transition">
+        <i class="fa-solid fa-microphone text-lg"></i>
+      </button>
+
+      <!-- Shutter Button -->
+      <button class="w-20 h-20 rounded-full border-4 border-purple-500 bg-white/10 flex items-center justify-center active:scale-95 transition shadow-lg shadow-purple-500/20">
+        <div class="w-14 h-14 rounded-full bg-purple-500"></div>
+      </button>
+
+      <button class="w-12 h-12 rounded-full bg-zinc-800 hover:bg-zinc-700 text-zinc-300 flex items-center justify-center transition">
+        <i class="fa-solid fa-rotate text-lg"></i>
+      </button>
+    </div>
+
+  </main>
+
+  <!-- Bottom Navigation Bar -->
+  <nav class="w-full max-w-md bg-zinc-900/90 backdrop-blur-md border-t border-zinc-800 rounded-t-3xl p-3 flex justify-around">
+    <button class="flex flex-col items-center text-purple-400 text-xs gap-1">
+      <i class="fa-solid fa-house text-lg"></i>
+      <span>Feed</span>
+    </button>
+    <button class="flex flex-col items-center text-zinc-500 hover:text-zinc-300 text-xs gap-1">
+      <i class="fa-solid fa-user-group text-lg"></i>
+      <span>Circles</span>
+    </button>
+    <button class="flex flex-col items-center text-zinc-500 hover:text-zinc-300 text-xs gap-1">
+      <i class="fa-solid fa-calendar-days text-lg"></i>
+      <span>Memories</span>
+    </button>
+    <button class="flex flex-col items-center text-zinc-500 hover:text-zinc-300 text-xs gap-1">
+      <i class="fa-solid fa-user text-lg"></i>
+      <span>Profile</span>
+    </button>
+  </nav>
+
+</body>
+</html>
